@@ -1,7 +1,3 @@
-# kacper
-# VEvgDk7IgGExqwsg
-# mongodb+srv://kacper:<password>@uptimedb.fc8o1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
 from database import Database
 from mcstatus import MinecraftServer
 from os import getenv
