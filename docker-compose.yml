@@ -1,0 +1,10 @@
+version: '3.7'
+services: 
+  uptime:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment: 
+      CHECK_INTERVAL: ""
+      MC_ADDRESS: ""
+      MONGO_URL: ""
