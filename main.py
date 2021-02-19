@@ -37,11 +37,13 @@ while True:
     last_check = time()
     # Log.out("Pinging...")
     try:
-        ping_resp = mc.ping()
+        status_resp = mc.status()
+        ping = status_resp.latency
+        players_online = status_resp.players.online
         # Log.out(f"Server responded within {ping_resp}ms")
-        uptime = Uptime.new(ping_resp, True)
+        uptime = Uptime.new(ping, players_online, True)
     except:
-        uptime = Uptime.new(-1, False)
+        uptime = Uptime.new(-1,0, False)
         Log.out("Server seems to be down...")
     
     # Log.out(f"Uptime obj: '{uptime.__dict__}'")
